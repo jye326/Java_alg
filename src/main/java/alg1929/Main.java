@@ -8,13 +8,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         boolean[] table = new boolean[1000001];
-        for (int i = 2; i < 1000001; i++){
+        for (int i = 2; i < 1000001; i++) {
             table[i] = true;
         }
-        for (int i = 2;i<1000001;i++) {
+        for (int i = 2; i < 1000001; i++) {
             if (table[i]) {
-                for (int j = 2;i*j<1000001;j++) {
-                    table[i*j] = false;
+                for (int j = 2; i * j < 1000001; j++) {
+                    table[i * j] = false;
                 }
             }
         }
@@ -22,12 +22,11 @@ public class Main {
         int M = sc.nextInt();
         int N = sc.nextInt();
 
-        for (int i = M; i<=N;i++){
+        for (int i = M; i <= N; i++) {
             if (table[i]) {
                 System.out.println(i);
             }
 
         }
-
     }
 }
